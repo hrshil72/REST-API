@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Displaying all the blogs</h1>
+
+    <article>
+      <% for(let blog of comments) { %>
+
+      <div class="container">
+        <h1><%= blog.id %></h1>
+        <h2><%= blog.author %></h2>
+        <h3><%= blog.comment %></h3>
+        <button>
+          <a href="/blogs/<%= blog.id %>">Show</a>
+        </button>
+      </div>
+
+      <% }%>
+    </article>
+  </body>
+</html>

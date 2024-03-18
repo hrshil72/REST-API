@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Showing a particular blog</h1>
+
+    <div id="showw">
+      <h1><%= foundProduct.id %></h1>
+      <h1><%= foundProduct.author %></h1>
+      <h1><%= foundProduct.comment %></h1>
+      <button><a href="/blogs">Back</a></button>
+      <button><a href="/blogs/<%=foundProduct.id%>/edit">Edit</a></button>
+
+      <form
+        action="/blogs/<%= foundProduct.id %>?_method=DELETE"
+        method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </body>
+</html>
